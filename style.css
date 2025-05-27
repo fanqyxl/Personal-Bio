@@ -65,11 +65,11 @@ canvas {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-    border: 2px solid rgba(139, 69, 19, 0.6);
-    box-shadow: 0 0 30px rgba(139, 69, 19, 0.5), 
-                0 0 50px rgba(139, 69, 19, 0.3),
-                0 0 70px rgba(139, 69, 19, 0.2),
-                inset 0 0 30px rgba(139, 69, 19, 0.2);
+    border: 2px solid rgba(253, 176, 197, 0.6);
+    box-shadow: 0 0 30px rgba(253, 176, 197, 0.5), 
+                0 0 50px rgba(253, 176, 197, 0.3),
+                0 0 70px rgba(253, 176, 197, 0.2),
+                inset 0 0 30px rgba(253, 176, 197, 0.2);
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -106,11 +106,11 @@ canvas {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 4px solid rgba(139, 69, 19, 0.9);
+    border: 4px solid rgba(253, 176, 197, 0.9);
     object-fit: cover;
-    box-shadow: 0 0 25px rgba(139, 69, 19, 0.8),
-                0 0 45px rgba(139, 69, 19, 0.4),
-                0 0 60px rgba(139, 69, 19, 0.2);
+    box-shadow: 0 0 25px rgba(253, 176, 197, 0.8),
+                0 0 45px rgba(253, 176, 197, 0.4),
+                0 0 60px rgba(253, 176, 197, 0.2);
     transition: transform 0.3s ease;
 }
 
@@ -152,11 +152,11 @@ canvas {
     max-width: 300px;
     min-width: 250px;
     margin-top: 0;
-    border: 2px solid rgba(139, 69, 19, 0.6);
-    box-shadow: 0 0 30px rgba(139, 69, 19, 0.5), 
-                0 0 50px rgba(139, 69, 19, 0.3),
-                0 0 70px rgba(139, 69, 19, 0.2),
-                inset 0 0 30px rgba(139, 69, 19, 0.2);
+    border: 2px solid rgba(253, 176, 197, 0.6);
+    box-shadow: 0 0 30px rgba(253, 176, 197, 0.5), 
+                0 0 50px rgba(253, 176, 197, 0.3),
+                0 0 70px rgba(253, 176, 197, 0.2),
+                inset 0 0 30px rgba(253, 176, 197, 0.2);
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
