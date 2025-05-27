@@ -1,11 +1,10 @@
 // SCRIPT SKIDDED FROM FROGGIE!!!
 
-// errr
 const textElement = document.getElementById("text");
 const overlay = document.getElementById("overlay");
 const audio = document.getElementById("audio-player");
 
-// lyrics timing and stuff
+// lyrics 
 const phrases = [
     "",
     "I've",
@@ -15,7 +14,7 @@ const phrases = [
     "I've been, having trouble sleeping..."
 ];
 
-// these are in seconds btw
+// second delays
 const delays = [1.66, 0.25, 0.8, 0.8, 0.6, 0.6];
 
 overlay.addEventListener("click", () => {
@@ -28,7 +27,7 @@ audio.addEventListener("play", () => {
     let i = 0;
     overlay.style.opacity = "1";
     
-    // Add staggered animations for containers
+    // add staggered animations for containers
     setTimeout(() => {
         document.querySelector('.container').classList.add('visible');
         setTimeout(() => {
