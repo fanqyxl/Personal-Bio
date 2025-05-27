@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    transition: filter 0.4s cubic-bezier(0.11, 0, 0.5, 0);
+    filter: brightness(1);
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+#overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#text {
+    color: white;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    width: 80%;
+    max-width: 300px;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    border: 2px solid rgba(139, 69, 19, 0.6);
+    box-shadow: 0 0 30px rgba(139, 69, 19, 0.5), 
+                0 0 50px rgba(139, 69, 19, 0.3),
+                0 0 70px rgba(139, 69, 19, 0.2),
+                inset 0 0 30px rgba(139, 69, 19, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.containers-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 2;
+    position: relative;
+}
+
+.profile-pic {
+    position: relative;
+}
+
+.profile-pic a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic a:hover {
+    transform: scale(1.05);
+}
+
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid rgba(139, 69, 19, 0.9);
+    object-fit: cover;
+    box-shadow: 0 0 25px rgba(139, 69, 19, 0.8),
+                0 0 45px rgba(139, 69, 19, 0.4),
+                0 0 60px rgba(139, 69, 19, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.bio {
+    margin: 0;
+    line-height: 1.4;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 450;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 0;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.music-container {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 1rem;
+    width: 80%;
+    max-width: 300px;
+    min-width: 250px;
+    margin-top: 0;
+    border: 2px solid rgba(139, 69, 19, 0.6);
+    box-shadow: 0 0 30px rgba(139, 69, 19, 0.5), 
+                0 0 50px rgba(139, 69, 19, 0.3),
+                0 0 70px rgba(139, 69, 19, 0.2),
+                inset 0 0 30px rgba(139, 69, 19, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.music-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.music-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    color: #fff;
+}
+
+.music-controls i {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.music-controls i:hover {
+    transform: scale(1.1);
+}
+
+#playBtn {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#playBtn:hover {
+    transform: scale(1.1);
+}
+
+#song-title {
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.proof-text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+    margin-top: 0.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        min-width: 200px;
+        max-width: 85%;
+        padding: 1.5rem 1rem;
+    }
+
+    .profile-pic img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .bio {
+        font-size: 0.9rem;
+    }
+
+    .social-icons {
+        gap: 1rem;
+    }
+
+    .social-icons a {
+        font-size: 1.2rem;
+    }
+
+    #overlay {
+        font-size: 1.5rem;
+    }
+
+    .music-container {
+        min-width: 200px;
+        max-width: 85%;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 1rem 0.8rem;
+    }
+
+    .profile-pic img {
+        width: 100px;
+        height: 100px;
+    }
+}
