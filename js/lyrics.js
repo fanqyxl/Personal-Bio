@@ -7,15 +7,20 @@ const audio = document.getElementById("audio-player");
 // lyrics 
 const phrases = [
     "",
-    "I've",
-    "I've been,",
-    "I've been, having",
-    "I've been, having trouble",
-    "I've been, having trouble sleeping..."
+    "I",
+    "I talk",
+    "I talk.",
+    "I talk..",
+    "I talk...",
+    "I talk... at",
+    "I talk... at night",
+    "I talk... at night.",  
+    "I talk... at night..",
+    "I talk... at night..",
 ];
 
 // second delays
-const delays = [1.66, 0.25, 0.8, 0.8, 0.6, 0.6];
+const delays = [1.66, 0.25, 0.2, 0.2, 0.2, 0.4, 0.5, 0.2, 0.2, 0.5];
 
 overlay.addEventListener("click", () => {
     textElement.textContent = "";

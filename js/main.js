@@ -18,7 +18,9 @@ const songTitle = document.getElementById('song-title');
 // playlist, might add more later
 // (if you have any suggestions, please let me know!)
 const playlist = [
+    'music/wifiskeleton - Bipolar.mp3',
     'music/Laufey - Trouble.mp3',
+    'music/Laufey - Let You Break My Heart Again.mp3',
     'music/Laufey - Silver Lining.mp3',
     'music/Omori - Title.mp3'
 ];
